@@ -4,6 +4,8 @@ MAINTAINER Robert Schneider <shakemedev@gmail.com>
 
 ARG DOCKER_COMPOSE_VERSION=1.13.0
 
+USER root
+
 RUN apt-get update \
     && apt-get install --no-install-recommends --assume-yes \
         apt-transport-https \
@@ -22,4 +24,6 @@ RUN apt-get update \
     && curl -L https://github.com/docker/compose/releases/download/${DOCKER_COMPOSE_VERSION}/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose \
     && apt-get clean \
     && rm -rf var/lib/apt/lists/*
+
+USER jenkins
 
