@@ -2,7 +2,7 @@ FROM jenkins/jenkins
 
 MAINTAINER Robert Schneider <shakemedev@gmail.com>
 
-ARG DOCKER_COMPOSE_VERSION=1.16.1
+ARG DOCKER_COMPOSE_VERSION=1.19.0
 
 USER root
 
