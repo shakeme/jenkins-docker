@@ -1,8 +1,8 @@
 FROM jenkins/jenkins
 
-MAINTAINER Robert Schneider <shakemedev@gmail.com>
+LABEL maintainer="Robert Schneider <shakemedev@gmail.com>"
 
-ARG DOCKER_COMPOSE_VERSION=1.19.0
+ARG DOCKER_COMPOSE_VERSION=1.24.1
 
 USER root
 
